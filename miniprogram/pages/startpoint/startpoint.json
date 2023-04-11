@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell-list":"../../components/cellList/cell"
+  },
+  "navigationBarTitleText": "出发地"
+}

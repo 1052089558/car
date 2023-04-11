@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "t-date-time-picker": "tdesign-miniprogram/date-time-picker/date-time-picker",
+    "cell-list":"../../components/cellList/cell",
+    "map":"../../components/map/map",
+    "t-popup": "tdesign-miniprogram/popup/popup",
+    "t-picker": "tdesign-miniprogram/picker/picker",
+    "t-picker-item": "tdesign-miniprogram/picker/picker-item",
+    "bottom-box":"../../components/bottombox/bottom"
+   
+  },
+  "navigationBarTitleText": "用车申请"
+}

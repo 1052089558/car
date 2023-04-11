@@ -1,0 +1,6 @@
+<!-- 更换乘车人 -->
+<cell-list celllist="{{userlist}}" bind:cellClick="carClick"  class="user"></cell-list>
+<view class="title">
+  <t-cell title="历史乘车人"  />
+</view>
+<cell-list celllist="{{history}}" bind:cellClick="carClick"  class="history"></cell-list>

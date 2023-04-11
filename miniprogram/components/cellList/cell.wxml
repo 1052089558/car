@@ -1,0 +1,25 @@
+<view class="lable">
+  <view class="leble-list" wx:for="{{celllist}}" wx:for-item="item" wx:for-index="index">
+    <view wx:if="{{item.type=='hide'}}" class="hide">
+    </view>
+    <t-cell wx:if="{{item.type==null}}" title="{{item.title}}" value="{{item.note}}" arrow="{{item.arrow}}" hover="true" jump-type="{{item.jump}}" required="{{item.required}}" note="{{item.note}}" bind:click="cellClick" data-item="{{item}}" description="{{item.description||item.addr}}" right-icon="{{item.righticon}}">
+    </t-cell>
+    <t-swipe-cell wx:if="{{item.type=='swipercell'}}">
+      <t-cell title="{{item.title}}" arrow="{{item.arrow}}" value="{{item.note}}" hover="true" jump-type="{{item.jump}}" required="{{item.required}}" note="{{item.note}}" bind:click="cellClick" data-item="{{item}}" description="{{item.description}}" right-icon="{{item.righticon}}" />
+      <view slot="right" style="display: flex; width: 160rpx; height: 100%; justify-content: center; align-items: center ; background-color: red; color:#ffffff ; font-size: 18px;" bind:tap="onDelete">删除</view>
+    </t-swipe-cell>
+    <t-tabs wx:if="{{item.type=='tabs'}}" defaultValue="{{0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+      <view wx:for="{{item.tabs}}" wx:for-item="tab">
+        <t-tab-panel label="{{tab.lable}}" value="{{tab.value}}">
+        </t-tab-panel>
+      </view>
+    </t-tabs>
+    <t-input wx:if="{{item.type=='input'}}" label="{{item.label}}" align="{{item.align==null?'':'item.align'}}" placeholder="{{item.placeholder}}" value="{{item.value}}" disabled="{{item.disabled}}" />
+    <view wx:if="{{item.type=='tags'}}" wx:key="index" class="tags">
+      <view wx:for="{{item.tags}}" wx:for-item="tag" wx:key="index" class="tags-tag">
+        <image wx:if="{{tag.url!=null}}" src="{{tag.url}}" class="tags-tag-img" mode="aspectFill" />
+        <t-check-tag size="large" variant="{{tag.variant==null?'outline':'item.variant'}}" bind:change="changeTag" checked="{{item.checked}}">{{tag.name}}</t-check-tag>
+      </view>
+    </view>
+  </view>
+</view>

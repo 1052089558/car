@@ -1,0 +1,27 @@
+/* components/list/list.wxss */
+.lable {
+  // margin: 20rpx;
+  .hide{
+    display: none;
+  }
+  .tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 20rpx;
+    &-tag {
+      display: flex;
+      flex-direction: column;
+      &-img {
+        width: 160rpx;
+        height: 160rpx;
+        margin-bottom: 20rpx;
+      }
+      t-check-tag {
+        text-align: center;
+      }
+    }
+  }
+}

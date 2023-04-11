@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-item": "tdesign-miniprogram/swiper/swiper-item",
+    "t-swiper-nav": "tdesign-miniprogram/swiper/swiper-nav",
+    "t-popup": "tdesign-miniprogram/popup/popup",
+    "cell-list":"../../components/cellList/cell",
+    "order-list":"../../components/orderlist/order"
+  },
+  "navigationStyle": "custom"
+}

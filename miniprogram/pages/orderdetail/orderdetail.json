@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "t-input": "tdesign-miniprogram/input/input",
+    "order-list":"../../components/orderlist/order",
+    "map":"../../components/map/map"
+  },
+  "navigationBarTitleText": "订单详情"
+}

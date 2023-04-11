@@ -1,0 +1,24 @@
+<view class="context">
+  <view class="context-top">
+    <view>
+      <view wx:for="{{topdata}}" wx:for-item="item" wx:for-index="index">
+        <t-input custom-style="padding:10rpx 20rpx;" label="{{item.label}}" disabled="{{disabled}}" value="{{item.data}}" wx:if="{{item.data?true:false}}" />
+      </view>
+    </view>
+
+
+  </view>
+  <view class="context-center">
+
+    <view>
+      <order-list orderlist="{{orderdetail}}" fieldlist="{{historyfield}}" disabled="true" scrolly="true" scrollHeight="100%" bind:orderDetail="orderDetail" bottomslot="true" bottom-slot-class="slotclass">
+        <map bind:markertap="markertap"></map>
+      </order-list>
+    </view>
+
+  </view>
+  <view class="context-bottom">
+    <t-button shape="round" custom-style="background-color:#999999; color:#ededed" size="large" disabled="{{disabled}}">驳回</t-button>
+    <t-button shape="round" custom-style="background-color:#af2429;color:#ededed" size="large" disabled="{{disabled}}">批准</t-button>
+  </view>
+</view>

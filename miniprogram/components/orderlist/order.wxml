@@ -1,0 +1,30 @@
+<view class="order">
+  <view class="titleClass">
+    {{title}}
+  </view>
+  <scroll-view scroll-y="{{scrolly}}" style="height: {{scrollHeight}}" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view class="order-list" wx:for="{{orderlist}}" wx:for-item="item" wx:for-index="index">
+      <view class="order-detail" bind:tap="orderDetail" data-item="{{item}}">
+        <view class="order-detail-top">
+          <view wx:for="{{item.type}}" wx:for-item="type" wx:for-index="index" class="order-detail-top-list">
+            <t-tag variant="outline" t-class="order-detail-top-list-type">{{type}}</t-tag>
+          </view>
+        </view>
+        <view class="order-detail-context">
+          <t-radio wx:if="{{check}}" value="{{item.checked}}" default-checked="{{false}}" icon="line" t-class="checkedclass" align="right" bind:change="radioChange" />
+          <view wx:for="{{fieldlist}}" wx:for-item="row" wx:for-index="index">
+            <view>
+              <t-input custom-style="padding:10rpx 32rpx; display:{{row.hide==true?'none':'flex'}}" label="{{row.label}}" disabled="{{disabled}}" value="{{item[row.data]}}" wx:if="{{item[row.data]?true:false}}" />
+            </view>
+          </view>
+          <view wx:if="{{item.status&&status}}">
+            <t-tag variant="light">{{item.status}}</t-tag>
+          </view>
+          <view class="bottom-slot-class" wx:if="{{bottomslot}}">
+            <slot></slot>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

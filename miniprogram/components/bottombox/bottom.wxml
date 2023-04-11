@@ -1,0 +1,18 @@
+<!--components/bottombox/bottom.wxml-->
+<view  type="{{type}}">
+  <t-picker
+  wx:if="{{type==''}}"
+  visible="{{visible}}"
+  title="{{title}}"
+  value="{{value}}"
+  cancelBtn="{{leftbtn}}"
+  confirmBtn="{{rightbtn}}"
+  bindchange="onConfirm"
+  bindpick="onColumnChange"
+  bindcancel="hidePicker"
+>
+<t-picker-item options="{{typelist}}"></t-picker-item>
+</t-picker>
+  <t-date-time-picker wx:if="{{type=='datetime'}}" title="{{title}}" visible="{{visible}}" mode="minute" value="{{value}}" format="{{format}}" bindchange="onConfirm" bindpick="onColumnChange" bindcancel="hidePicker" />
+
+</view>

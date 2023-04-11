@@ -1,0 +1,20 @@
+<!-- 用车申请 -->
+<view class="apply">
+  <t-tabs defaultValue="{{tabvalue}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+    <t-tab-panel label="包车" value="0"></t-tab-panel>
+    <t-tab-panel label="日常" value="1"></t-tab-panel>
+  </t-tabs>
+ 
+    <cell-list celllist="{{userlist}}" bind:cellClick="userClick"></cell-list>
+    <cell-list celllist="{{carlist}}" bind:cellClick="carClick" ></cell-list>
+    <view class="map">
+      <map bind:markertap="markertap"></map>
+    </view>
+   
+    <t-button theme="" shape="round" t-class="t-class-color"  bindtap='submitapply' >提交申请</t-button>
+
+  <bottom-box type="datetime" title="选择日期和时间"  visible="{{datetimevisible}}"  bind:onConfirm="dateChange"
+  format="YYYY-MM-DD HH:mm:ss" ></bottom-box>
+<bottom-box title="支付方式" visible="{{payvisity}}" typelist="{{playtype}}" bind:onConfirm="payChange"></bottom-box>
+<bottom-box title="用车类型" visible="{{carvisity}}" typelist="{{cartype}}" bind:onConfirm="carChange"></bottom-box>
+</view>

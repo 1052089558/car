@@ -1,0 +1,13 @@
+<!-- 选择城市 -->
+<view class="context">
+  <t-search placeholder="搜索" shape="round" center="true"  />
+  <view class="position">
+    <text>当前城市</text>
+    <view>{{currentcity}}</view>
+    <text>定位城市</text>
+    <view>{{positioncity}}</view>
+  </view>
+
+</view>
+
+

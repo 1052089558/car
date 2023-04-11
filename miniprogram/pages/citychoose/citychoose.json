@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "t-indexes": "tdesign-miniprogram/indexes/indexes",
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-search": "tdesign-miniprogram/search/search"
+  },
+  "navigationBarTitleText": "选择城市"
+}

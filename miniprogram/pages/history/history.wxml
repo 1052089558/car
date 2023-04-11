@@ -1,0 +1,12 @@
+
+<view class="context">
+  <view class="context-top">
+    <t-tabs defaultValue="0" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs">
+    <t-tab-panel label="已批准" value="0"></t-tab-panel>
+    <t-tab-panel label="已驳回" value="1"></t-tab-panel>
+  </t-tabs>
+  </view>
+  <view class="context">
+    <order-list orderlist="{{historydata}}" fieldlist="{{historyfield}}" orderDetail="orderDetail" disabled="true" scrolly="true" scrollHeight="100%" bind:orderDetail="orderDetail"   ></order-list>
+  </view>
+</view>

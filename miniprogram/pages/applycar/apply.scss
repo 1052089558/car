@@ -1,0 +1,23 @@
+page{
+  background-color: #f8f8f8;
+
+  .t-class-color{
+    position: relative;
+    background-color:#af2429;
+    color: #edd8d8;
+    bottom: -20rpx;
+    width: 600rpx;
+   margin-left: 50%;
+   transform: translate(-50%);
+  }
+  .bottompopup{
+    position: fixed;
+    height: 400rpx;
+    background-color: #ffff;
+  
+  }
+  .map{
+    margin-top: 20rpx;
+  }
+}
+

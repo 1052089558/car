@@ -1,0 +1,32 @@
+<view class="content">
+  <view class="title">欢迎您,登录XX出行用户端</view>
+  <view class="center">
+    <view class="traveltype">
+      <text bindtap="travelChange" class="{{flag==false?'fontclass':''}}">公务出行</text>
+      <i></i>
+      <text bindtap="travelChange" class="{{flag==true?'fontclass':''}}">租车出行</text>
+    </view>
+    <view class="formClass">
+      <form bindsubmit="submit" wx:if="{{flag==false}}">
+        <t-input placeholder="请输入账号" prefix-icon="user" value="{{form.user}}" name="user"></t-input>
+        <t-input placeholder="请输入密码" type='password' prefix-icon="lock-on" value="{{form.password}}" name="password"></t-input>
+        <t-button theme="primary" shape="round" block="true"  t-class="t-class-color" type="submit">登录</t-button>
+      </form>
+      <form wx:if="{{flag==true}}">
+      
+      <t-button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" theme="primary" shape="round" block="true"  t-class="t-class-color">手机号授权登录</t-button>
+    </form>
+    </view>
+   
+  
+  </view>
+
+<view class="protocol">
+  <view>
+    点击登录代表您已同意
+    <text bindtap="goProtocol" class="fontcolor">《服务协议》</text>
+  </view>
+</view>
+</view>
+
+

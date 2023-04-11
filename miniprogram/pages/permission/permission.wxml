@@ -1,0 +1,14 @@
+<!-- 用车审批 -->
+<view class="context">
+  <view class="context-top">
+    <t-search placeholder="查找乘车人姓名/手机号" shape="round" value="{{value}}" custom-style="width:650rpx" />
+    <t-icon name="{{history}}" size="70rpx" data-name="{{item}}" bind:click="onIconTap" custom-style="margin-top:5rpx;margin-right:10rpx" />
+  </view>
+  <view class="context-center">
+    <order-list orderlist="{{orderlist}}" check="true" scrolly="true" scrollHeight="1200rpx"   bind:orderDetail="orderDetail" ></order-list>
+  </view>
+ <view class="context-bottom">
+  <t-button block="true" size="large" theme="danger">驳回</t-button>
+  <t-button block="true" size="large" theme="primary">批准</t-button>
+ </view>
+</view>

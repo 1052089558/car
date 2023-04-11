@@ -1,0 +1,47 @@
+/* pages/orderdetail/orderdetail.wxss */
+
+page{ 
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  .context{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+ 
+    &-top{
+      display: flex;
+  
+     
+    flex-direction: column;
+     margin: 20rpx 40rpx;
+    border-radius: 20rpx;
+
+    }
+    &-center{
+     flex: 1;
+     margin: 0 20rpx 20rpx 20rpx;
+     .slotclass{
+      background-color: #ffffff;
+      display: flex;
+      padding: 20rpx;
+    }
+    }
+  
+    &-bottom{
+      text-align: center;
+      bottom: 0;
+      height: 120rpx;
+      width: 100%;
+     .t-button{
+       width: 300rpx;
+       margin: 10rpx;
+     }
+    }
+  
+  
+   
+  
+  }
+}

@@ -1,0 +1,28 @@
+<view class="context">
+  <t-navbar title="公务出行">
+  <view slot="left" class="custom-left">
+    <view class="avatar-example">
+      <t-avatar icon="user" t-class="avatarclass" size="small" bind:tap="handlePopup" />
+    </view>
+  </view>
+</t-navbar>
+
+  <t-swiper current="{{current}}" autoplay="{{autoplay}}" duration="{{duration}}" interval="{{interval}}" custom-style="height:400rpx">
+  <t-swiper-item wx:for="{{swiperList}}" wx:key="index">
+    <image src="{{item.image}}" class="img" />
+  </t-swiper-item>
+</t-swiper>
+<cell-list celllist="{{celllist}}" bind:cellClick="cellClick" ></cell-list>
+<view class="listclass">
+  <order-list orderlist="{{orderlist}}" bottomslot="true" status="true" scrolly="true" scrollHeight="780rpx" bind:orderDetail="orderDetail"  title="进行中的订单" >
+  </order-list>
+</view>
+<t-button  shape="round"   t-class="t-class-color" bindtap="handleAction">用车申请</t-button>
+<t-action-sheet id="t-action-sheet" bind:selected="handleSelected" />
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="left" t-class="userinfo">
+  <view class="userinfo"></view>
+</t-popup>
+</view>
+
+
+

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cell-list":"../../components/cellList/cell"
+
+  },
+  "navigationBarTitleText": "更换乘车人"
+}

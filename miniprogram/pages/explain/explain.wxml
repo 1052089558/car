@@ -1,0 +1,6 @@
+<!-- 用车说明 -->
+<view class="explain">
+  <t-textarea placeholder="请输入用车说明" value="{{value}}" bordered t-class="areaclass"></t-textarea>
+  <t-button theme="primary" shape="round" block="true"  t-class="t-class-color" type="submit">确定</t-button>
+</view>
+

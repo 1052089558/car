@@ -1,0 +1,13 @@
+/* pages/citychoose/citychoose.wxss */
+.position{
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+  text{
+    color: #999999;
+  }
+  view{
+    color: #1abc9c;
+  }
+}

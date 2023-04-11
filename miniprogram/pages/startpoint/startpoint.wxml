@@ -1,0 +1,9 @@
+<!-- 出发地 -->
+<view class="context">
+  <t-input placeholder="请选择" value="{{city}}"  borderless="{{false}}" t-class="context-left" suffix-icon="location" bind:focus="cityChange" />
+  <t-input placeholder="输入您的出发地名称" value="{{search}}" borderless="{{false}}" data-position="value" t-class="context-right" bind:change="position" bind:focus="position" />
+
+</view>
+<view>
+    <cell-list celllist="{{suggestion}}" bind:cellClick="carClick" ></cell-list>
+  </view>
